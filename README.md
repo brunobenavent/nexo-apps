@@ -38,14 +38,14 @@ Before you start:
 In your project folder:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/EricTechPro/super-board/main/get.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brunobenavent/nexo-apps/main/get.sh | bash
 ```
 
 Or as a Claude Code plugin:
 
 ```
-/plugin marketplace add EricTechPro/super-board
-/plugin install super-board@super-board
+/plugin marketplace add brunobenavent/nexo-apps
+/plugin install nexo-apps@nexo-apps
 ```
 
 > [!NOTE]
@@ -75,7 +75,7 @@ canonical skill files; the package bundles no private skill. See
 ### 1. Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/EricTechPro/super-board/main/get.sh | bash
+curl -fsSL https://raw.githubusercontent.com/brunobenavent/nexo-apps/main/get.sh | bash
 ```
 
 ### 2. Onboard

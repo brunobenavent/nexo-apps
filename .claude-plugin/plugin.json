@@ -1,7 +1,7 @@
 {
   "name": "nexo-apps",
   "version": "3.3.0",
-  "description": "Nexo Apps application factory, based on super-board. Public command: /nexo-board. Compatibility command: /super-board. Primary skills: nexo-board, super-board, super-build, super-qa, super-review, super-collect. Secondary skills: visual, git-sync, ui-refine-loop, pr-security-review.",
+  "description": "Nexo Apps application factory, based on super-board. Public commands: /nexo-board, /nexo-collect, /nexo-build, /nexo-qa and /nexo-review. The inherited /super-* names remain compatibility aliases during migration.",
   "author": {
     "name": "Bruno Benavent"
   },

@@ -8,7 +8,7 @@
 
 <p>Una base modular para convertir ideas en aplicaciones probadas y revisadas.</p>
 
-<p>10 skills (6 you type, 4 the board runs) · 9 commands · 6 guard hooks</p>
+<p>9 skills (5 you type, 4 the board runs) · 9 commands · 6 guard hooks</p>
 
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-3.3.0-1f883d?style=flat-square">
@@ -49,7 +49,7 @@ Or as a Claude Code plugin:
 ```
 
 > [!NOTE]
-> The plugin ships the skills only. Run `/super-board:super-board onboard` and its 🔍 Checks step adds the guard hooks, scripts and workflows. Needs Claude Code, `gh`, `jq`, bash 3.2+ and Python 3.9+; the installer checks.
+> The plugin ships the skills only. Run `/nexo-board onboard` and its 🔍 Checks step adds the guard hooks, scripts and workflows. Needs Claude Code, `gh`, `jq`, bash 3.2+ and Python 3.9+; the installer checks.
 
 ### Security
 
@@ -60,7 +60,7 @@ Two security skills come with every install, and they stay separate:
 | [`pr-security-review`](skills/pr-security-review/README.md) | **On every PR**, inside the QA lane. Each finding fails QA and goes back to Build. | The PR's diff against its base: high-confidence, exploitable bugs only. From Anthropic's [claude-code-security-review](https://github.com/anthropics/claude-code-security-review). |
 | `security-audit` | **Only when you ask** (`/security-audit`). The board never runs it. | The whole repository, in depth. From Cloudflare's [security-audit-skill](https://github.com/cloudflare/security-audit-skill), fetched at install with `npx skills`. |
 
-`--no-helper-skills` skips the `security-audit` download; `/super-board onboard` adds it later.
+`--no-helper-skills` skips the `security-audit` download; `/nexo-board onboard` adds it later.
 Claude Code's built-in `/security-review` is left as it is.
 
 Running from Codex or OpenCode? See [supported hosts](docs/hosts.md) for tested versions, sign-in and gaps.
@@ -81,7 +81,7 @@ curl -fsSL https://raw.githubusercontent.com/brunobenavent/nexo-apps/main/get.sh
 ### 2. Onboard
 
 ```
-/super-board onboard
+/nexo-board onboard
 ```
 
 Checks · GitHub · Board · Branch · AGENTS.md · Policies · Bug sources · Review. <kbd>Enter</kbd> takes the recommended answer.
@@ -89,7 +89,7 @@ Checks · GitHub · Board · Branch · AGENTS.md · Policies · Bug sources · R
 ### 3. Run
 
 ```
-/super-board run my-app
+/nexo-board run my-app
 ```
 
 Add cards to `Ready`. The board drains on its own.
@@ -103,16 +103,15 @@ Add cards to `Ready`. The board drains on its own.
 
 ## Skills
 
-**10 skills (6 you type, 4 the board runs).** Uses [Matt Pocock skills](https://github.com/mattpocock/skills), ponytail, impeccable, humanizer, [Anthropic's security review](https://github.com/anthropics/claude-code-security-review) and [Cloudflare's security-audit](https://github.com/cloudflare/security-audit-skill).
+**9 skills (5 you type, 4 the board runs).** Uses [Matt Pocock skills](https://github.com/mattpocock/skills), ponytail, impeccable, humanizer, [Anthropic's security review](https://github.com/anthropics/claude-code-security-review) and [Cloudflare's security-audit](https://github.com/cloudflare/security-audit-skill).
 
 <!-- skills:start -->
-**You type — 6 skills**
+**You type — 5 skills**
 
 | Skill | What it does |
 |---|---|
-| [`/super-board`](skills/super-board/README.md) | Orchestrator: plans waves, runs Build → QA → Review, merges when green. |
 | [`/nexo-board`](skills/nexo-board/README.md) | Nexo Apps command for the inherited application factory. |
-| [`/super-collect`](skills/super-collect/README.md) | Finds problems, verifies them, writes a findings doc for /to-spec and /to-tickets. |
+| [`/nexo-collect`](skills/nexo-collect/README.md) | Finds problems, verifies them, writes a findings doc for /to-spec and /to-tickets. |
 | [`/ui-refine-loop`](skills/ui-refine-loop/README.md) | Critique → refine loop that polishes one page or component. |
 | [`/visual`](skills/visual/README.md) | One HTML page: branch recap, plan, or codebase map with diagrams. |
 | [`/git-sync`](skills/git-sync/README.md) | Commit per logical change, merge-pull, push without force, report. |
@@ -121,9 +120,9 @@ Add cards to `Ready`. The board drains on its own.
 
 | Skill | What it does |
 |---|---|
-| [`/super-build`](skills/super-build/README.md) | Builder lane: worktree, smallest safe change, tests, draft PR. |
-| [`/super-qa`](skills/super-qa/README.md) | Tester lane: evidence, test-gap check, screenshots, or bounce to Build. |
-| [`/super-review`](skills/super-review/README.md) | Reviewer lane: own hypotheses, remembers prior findings, merge gate. |
+| [`/nexo-build`](skills/nexo-build/README.md) | Builder lane: worktree, smallest safe change, tests, draft PR. |
+| [`/nexo-qa`](skills/nexo-qa/README.md) | Tester lane: evidence, test-gap check, screenshots, or bounce to Build. |
+| [`/nexo-review`](skills/nexo-review/README.md) | Reviewer lane: own hypotheses, remembers prior findings, merge gate. |
 | [`/pr-security-review`](skills/pr-security-review/README.md) | Security pass on every PR diff; super-qa runs it, findings fail QA. |
 <!-- skills:end -->
 
@@ -132,12 +131,12 @@ Each name links to that skill's README. Adding a skill? Write its `SKILL.md` and
 ## Commands
 
 ```
-/super-board onboard          # 8-step setup, resumes
-/super-board lint             # vague ACs?
-/super-board status           # read-only snapshot
-/super-board run <slug>       # drain the board
-/super-board stop             # stop workers
-/super-collect [source]       # find problems → findings doc → /to-spec
+/nexo-board onboard          # 8-step setup, resumes
+/nexo-board lint             # vague ACs?
+/nexo-board status           # read-only snapshot
+/nexo-board run <slug>       # drain the board
+/nexo-board stop             # stop workers
+/nexo-collect [source]       # find problems → findings doc → /to-spec
 /ui-refine-loop <route>       # polish one page
 /visual [recap|plan|path]     # one HTML page
 /git-sync                     # commit, pull, push
@@ -166,18 +165,18 @@ A cheap router grades each card easy, medium or hard first; the run flag picks t
 
 | Command | Router | Easy card | Medium card | Hard card |
 | --- | --- | --- | --- | --- |
-| `/super-board run` | Haiku 4.5 | Sonnet 5.5 | Opus 5.5 | session model |
-| `/super-board run --low` | Haiku 4.5 | Haiku 4.5 | Sonnet 5.5 | Opus 5.5 |
-| `/super-board run --high` | Sonnet 5.5 | Opus 5.5 | Opus 5.5 | Opus 5.5 |
-| `/super-board run --codex` | gpt-6-luna | gpt-6.1-sol | gpt-6.1-sol | gpt-6-astra |
-| `/super-board run --codex --low` | gpt-6-luna | gpt-6-luna | gpt-6.1-sol | gpt-6.1-sol |
-| `/super-board run --codex --high` | gpt-6-luna | gpt-6-astra | gpt-6-astra | gpt-6-astra |
+| `/nexo-board run` | Haiku 4.5 | Sonnet 5.5 | Opus 5.5 | session model |
+| `/nexo-board run --low` | Haiku 4.5 | Haiku 4.5 | Sonnet 5.5 | Opus 5.5 |
+| `/nexo-board run --high` | Sonnet 5.5 | Opus 5.5 | Opus 5.5 | Opus 5.5 |
+| `/nexo-board run --codex` | gpt-6-luna | gpt-6.1-sol | gpt-6.1-sol | gpt-6-astra |
+| `/nexo-board run --codex --low` | gpt-6-luna | gpt-6-luna | gpt-6.1-sol | gpt-6.1-sol |
+| `/nexo-board run --codex --high` | gpt-6-luna | gpt-6-astra | gpt-6-astra | gpt-6-astra |
 
-`/super-board run --codex=<model>` pins one model for every card and skips the router.
+`/nexo-board run --codex=<model>` pins one model for every card and skips the router.
 
-Run inside Codex? plain `/super-board run` switches to the Codex ladder by itself. Codex has no
-`/super-board` command: it finds skills in `.agents/skills/` (symlinks followed), so link
-`.claude/skills/super-board` there and type `$super-board run`.
+Run inside Codex? plain `/nexo-board run` switches to the Codex ladder by itself. Codex has no
+`/nexo-board` command: it finds skills in `.agents/skills/` (symlinks followed), so link
+`.claude/skills/nexo-board` there and type `$nexo-board run`.
 
 ## Writing standard
 
@@ -187,7 +186,7 @@ Commits, tickets, PR bodies and comments all follow [one writing standard](https
 <summary><strong>Upgrading from 2.x</strong></summary>
 
 1. Re-run the install line.
-2. Run `/super-board onboard`; step 1 upgrades for you and keeps a backup.
+2. Run `/nexo-board onboard`; step 1 upgrades for you and keeps a backup.
 3. Try `board-migrate --dry-run` on a copy of your board first.
 
 [Full notes](RELEASE-NOTES.md#upgrading-from-2x)

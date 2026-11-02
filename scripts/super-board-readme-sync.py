@@ -28,6 +28,9 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 SKILLS = ROOT / "skills"
 FAMILIES = SKILLS / "families.json"
+# These directories remain as compatibility implementations while the public
+# Nexo Apps aliases become the documented interface.
+COMPATIBILITY_SKILLS = {"super-board", "super-collect", "super-build", "super-qa", "super-review"}
 START, END = "<!-- skills:start -->", "<!-- skills:end -->"
 
 
@@ -68,7 +71,7 @@ def render() -> tuple[str, dict[str, int]]:
         families = json.loads(FAMILIES.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         die(f"cannot read {FAMILIES.relative_to(ROOT)}: {e}")
-    on_disk = {p.parent.name: p for p in SKILLS.glob("*/SKILL.md")}
+    on_disk = {p.parent.name: p for p in SKILLS.glob("*/SKILL.md") if p.parent.name not in COMPATIBILITY_SKILLS}
     listed = [s for fam in families.values() for s in fam["skills"]]
     missing = sorted(set(on_disk) - set(listed))
     extra = sorted(set(listed) - set(on_disk))

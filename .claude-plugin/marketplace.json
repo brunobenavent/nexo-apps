@@ -6,7 +6,7 @@
     {
       "name": "nexo-apps",
       "source": "./",
-      "description": "Nexo Apps application factory: /nexo-board is the public command, with /super-board retained as compatibility. Includes the inherited build, QA, review, visual and synchronization skills.",
+      "description": "Nexo Apps application factory: /nexo-board, /nexo-collect, /nexo-build, /nexo-qa and /nexo-review are the public commands. The inherited /super-* names remain compatibility aliases.",
       "category": "development",
       "homepage": "https://github.com/brunobenavent/nexo-apps"
     }

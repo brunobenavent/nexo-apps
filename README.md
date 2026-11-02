@@ -8,7 +8,7 @@
 
 <p>Una base modular para convertir ideas en aplicaciones probadas y revisadas.</p>
 
-<p>9 skills (5 you type, 4 the board runs) · 9 commands · 6 guard hooks</p>
+<p>10 skills (6 you type, 4 the board runs) · 9 commands · 6 guard hooks</p>
 
 <p>
 <img alt="Version" src="https://img.shields.io/badge/version-3.3.0-1f883d?style=flat-square">
@@ -103,14 +103,15 @@ Add cards to `Ready`. The board drains on its own.
 
 ## Skills
 
-**9 skills (5 you type, 4 the board runs).** Uses [Matt Pocock skills](https://github.com/mattpocock/skills), ponytail, impeccable, humanizer, [Anthropic's security review](https://github.com/anthropics/claude-code-security-review) and [Cloudflare's security-audit](https://github.com/cloudflare/security-audit-skill).
+**10 skills (6 you type, 4 the board runs).** Uses [Matt Pocock skills](https://github.com/mattpocock/skills), ponytail, impeccable, humanizer, [Anthropic's security review](https://github.com/anthropics/claude-code-security-review) and [Cloudflare's security-audit](https://github.com/cloudflare/security-audit-skill).
 
 <!-- skills:start -->
-**You type — 5 skills**
+**You type — 6 skills**
 
 | Skill | What it does |
 |---|---|
 | [`/super-board`](skills/super-board/README.md) | Orchestrator: plans waves, runs Build → QA → Review, merges when green. |
+| [`/nexo-board`](skills/nexo-board/README.md) | Nexo Apps command for the inherited application factory. |
 | [`/super-collect`](skills/super-collect/README.md) | Finds problems, verifies them, writes a findings doc for /to-spec and /to-tickets. |
 | [`/ui-refine-loop`](skills/ui-refine-loop/README.md) | Critique → refine loop that polishes one page or component. |
 | [`/visual`](skills/visual/README.md) | One HTML page: branch recap, plan, or codebase map with diagrams. |

@@ -6,7 +6,7 @@
     {
       "name": "nexo-apps",
       "source": "./",
-      "description": "Autonomous GitHub Project board runner: super-board, super-build, super-qa, super-review, super-collect, visual, git-sync, ui-refine-loop, pr-security-review (security pass on every PR; onboard adds Cloudflare's on-demand security-audit). After install, run /super-board onboard to add the guard hooks, .claude/bin scripts and workflows a plugin cannot ship.",
+      "description": "Nexo Apps application factory: /nexo-board is the public command, with /super-board retained as compatibility. Includes the inherited build, QA, review, visual and synchronization skills.",
       "category": "development",
       "homepage": "https://github.com/brunobenavent/nexo-apps"
     }

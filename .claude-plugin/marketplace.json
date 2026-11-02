@@ -1,14 +1,14 @@
 {
-  "name": "super-board",
-  "description": "Eric Tech's super-board pack: an autonomous GitHub Project board runner and its lane skills.",
-  "owner": { "name": "Eric Tech", "url": "https://github.com/EricTechPro" },
+  "name": "nexo-apps",
+  "description": "Nexo Apps: an adapted application factory based on Eric Tech's super-board pack.",
+  "owner": { "name": "Bruno Benavent", "url": "https://github.com/brunobenavent" },
   "plugins": [
     {
-      "name": "super-board",
+      "name": "nexo-apps",
       "source": "./",
       "description": "Autonomous GitHub Project board runner: super-board, super-build, super-qa, super-review, super-collect, visual, git-sync, ui-refine-loop, pr-security-review (security pass on every PR; onboard adds Cloudflare's on-demand security-audit). After install, run /super-board onboard to add the guard hooks, .claude/bin scripts and workflows a plugin cannot ship.",
       "category": "development",
-      "homepage": "https://github.com/EricTechPro/super-board"
+      "homepage": "https://github.com/brunobenavent/nexo-apps"
     }
   ]
 }

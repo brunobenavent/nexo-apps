@@ -2,11 +2,11 @@
 
 <img src="docs/assets/logo.svg" width="88" height="88" alt="super-board kanban logo">
 
-<h1>super-board</h1>
+<h1>Nexo Apps</h1>
 
-<p><strong>Add tasks, walk away, get merged PRs with proof.</strong></p>
+<p><strong>Fábrica de aplicaciones basada en super-board.</strong></p>
 
-<p>Stop babysitting coding agents: cards you drop in Ready come back as tested, reviewed PRs.</p>
+<p>Una base modular para convertir ideas en aplicaciones probadas y revisadas.</p>
 
 <p>9 skills (5 you type, 4 the board runs) · 9 commands · 6 guard hooks</p>
 
@@ -16,16 +16,16 @@
 <img alt="License" src="https://img.shields.io/badge/license-MIT-0969da?style=flat-square">
 </p>
 
-<p><a href="https://erictechpro.github.io/super-board/"><strong>🌐 Live site: erictechpro.github.io/super-board</strong></a></p>
+<p><a href="https://github.com/brunobenavent/nexo-apps"><strong>🌐 GitHub: github.com/brunobenavent/nexo-apps</strong></a></p>
 
-<p>⭐ Star this repo if it helps · <a href="https://www.skool.com/erictech">Join the builders using this → weekly live calls, setup help</a> · <a href="https://youtu.be/aggJvNZxfKA">▶ Watch the walkthrough</a></p>
+<p>Adaptado y mantenido por Bruno Benavent.</p>
 
 <p><a href="#install">Install</a> · <a href="#quick-start">Quick start</a> · <a href="#how-it-works">How it works</a> · <a href="#skills">Skills</a> · <a href="#commands">Commands</a> · <a href="#guards--hooks">Guards</a></p>
 
 </div>
 
-<p align="center"><a href="https://erictechpro.github.io/super-board/skill-map/"><img src="docs/assets/skill-map.png" alt="The super-board skill map: open the interactive version" width="100%"></a></p>
-<p align="center"><sub>The skill map. Click it for the live version: zoom, pan, open any node.</sub></p>
+<p align="center"><a href="https://github.com/brunobenavent/nexo-apps/tree/main/diagrams"><img src="docs/assets/skill-map.png" alt="Nexo Apps skill map" width="100%"></a></p>
+<p align="center"><sub>Mapa de skills y arquitectura heredado de la base original; se personalizará progresivamente.</sub></p>
 
 ## Install
 
@@ -195,7 +195,7 @@ Commits, tickets, PR bodies and comments all follow [one writing standard](https
 
 ## Credits
 
-MIT © Eric Tech ([LICENSE](LICENSE)). Built on [obra/superpowers](https://github.com/obra/superpowers), [mattpocock/skills](https://github.com/mattpocock/skills), [BuilderIO/skills](https://github.com/BuilderIO/skills) and [tt-a1i/archify](https://github.com/tt-a1i/archify). `pr-security-review` is ported from [anthropics/claude-code-security-review](https://github.com/anthropics/claude-code-security-review) (MIT © 2025 Anthropic, [notice](skills/pr-security-review/LICENSE)); `security-audit` is [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) (MIT © 2025-2026 Cloudflare, Inc.), installed from its own repo, not bundled.
+Nexo Apps es una adaptación mantenida por Bruno Benavent, basada en [super-board](https://github.com/EricTechPro/super-board) de Eric Tech bajo licencia MIT. Se conservan las atribuciones y avisos de licencia originales. También incorpora trabajo de [obra/superpowers](https://github.com/obra/superpowers), [mattpocock/skills](https://github.com/mattpocock/skills), [BuilderIO/skills](https://github.com/BuilderIO/skills) y [tt-a1i/archify](https://github.com/tt-a1i/archify), según sus respectivos avisos.
 
 ---
 
@@ -211,7 +211,7 @@ MIT © Eric Tech ([LICENSE](LICENSE)). Built on [obra/superpowers](https://githu
 <a href="RELEASING.md">Release checks</a> ·
 <a href="https://youtu.be/nX_bGyIOFM4">YouTube walkthrough</a>
 </p>
-<p align="center"><sub>Made by Eric Tech</sub></p>
+<p align="center"><sub>Adapted and maintained by Bruno Benavent · Based on super-board by Eric Tech</sub></p>
 
 ### Worker skill availability
 
